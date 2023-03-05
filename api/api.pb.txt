@@ -2735,8 +2735,8 @@ file {
         label: LABEL_OPTIONAL
         type: TYPE_UINT32
         options {
-          65001: 0
           65003: "os.FileMode"
+          65001: 0
         }
         json_name: "mode"
       }
@@ -2904,8 +2904,8 @@ file {
       type: TYPE_MESSAGE
       type_name: ".google.protobuf.Duration"
       options {
-        65001: 0
         65011: 1
+        65001: 0
       }
       json_name: "delay"
     }
@@ -3348,8 +3348,8 @@ file {
         }
       }
       options {
-        62001: 0
         62023: "PublishMode"
+        62001: 0
       }
     }
   }
@@ -4055,8 +4055,8 @@ file {
       label: LABEL_OPTIONAL
       type: TYPE_UINT32
       options {
-        65001: 0
         65003: "os.FileMode"
+        65001: 0
       }
       json_name: "mode"
     }
@@ -5052,8 +5052,8 @@ file {
       }
     }
     options {
-      62001: 0
       62023: "NodeRole"
+      62001: 0
     }
   }
   syntax: "proto3"
@@ -5677,6 +5677,14 @@ file {
       type_name: ".docker.swarmkit.v1.ContainerSpec.Ulimit"
       json_name: "ulimits"
     }
+    field {
+      name: "Devices"
+      number: 30
+      label: LABEL_REPEATED
+      type: TYPE_MESSAGE
+      type_name: ".docker.swarmkit.v1.ContainerSpec.DeviceMapping"
+      json_name: "Devices"
+    }
     nested_type {
       name: "LabelsEntry"
       field {
@@ -5773,6 +5781,30 @@ file {
         label: LABEL_OPTIONAL
         type: TYPE_INT64
         json_name: "hard"
+      }
+    }
+    nested_type {
+      name: "DeviceMapping"
+      field {
+        name: "pathOnHost"
+        number: 1
+        label: LABEL_OPTIONAL
+        type: TYPE_STRING
+        json_name: "pathOnHost"
+      }
+      field {
+        name: "pathInContainer"
+        number: 2
+        label: LABEL_OPTIONAL
+        type: TYPE_STRING
+        json_name: "pathInContainer"
+      }
+      field {
+        name: "cgroupPermissions"
+        number: 3
+        label: LABEL_OPTIONAL
+        type: TYPE_STRING
+        json_name: "cgroupPermissions"
       }
     }
     enum_type {
@@ -9739,8 +9771,8 @@ file {
       type: TYPE_MESSAGE
       type_name: ".google.protobuf.Duration"
       options {
-        65001: 0
         65011: 1
+        65001: 0
       }
       json_name: "period"
     }
@@ -10958,14 +10990,14 @@ file {
     }
   }
   options {
+    63017: 1
+    63020: 1
+    63018: 1
     63001: 0
     63002: 0
-    63017: 1
-    63018: 1
-    63020: 1
+    63035: 0
     63026: 0
     63034: 0
-    63035: 0
   }
 }
 file {
